@@ -1,0 +1,131 @@
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    #background-color: #0267C1;
+    background-image: linear-gradient(#000000b0, #00000000);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    padding:50px 0px 50px;
+    transition: .25s ease;
+}
+
+.bottomBar {
+    overflow:hidden;
+    position:fixed;
+    margin:0px;
+    bottom:0;
+    width:100%;
+}
+
+.navbar.navbar-stickied {
+    background-image:none;
+    background-color:#f3f6eb;
+    padding:25px 0px 25px;
+    color:black;
+    #border-bottom-style:solid;
+    #border-bottom-width:2px;
+    #border-color:black;
+}
+.navbar.navbar-stickied a {
+    color:black;
+}
+/* Links inside the navbar */
+.navbar a, .navbar-stickied a {
+    padding:0px 20px 0px 20px;
+    height:30px;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    font-size:large;
+    text-align: center;
+    text-decoration: none;
+    transition: color .1s ease-out;
+}
+
+/* Change background on mouse-over */
+.navbar.navbar-stickied a:hover {
+    color:#1C5C6C;
+    transform:scale(1.2);
+    transition:.25s ease;
+}
+.navbar a:hover {
+    color: white;
+    transform:scale(1.2);
+    transition: .25s ease;
+}
+
+/* Main content */
+.nameBar {
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    border-bottom-width:2px;
+    border-bottom:solid;
+    background-image:url("public/skyline.jpg");
+    background-size:cover;
+    background-position:center;
+    #background-attachment:fixed;
+    text-align:center;
+}
+
+.backBox {
+    display:inline-block;
+    margin-top:20%;
+    width:50%;
+
+    #background-color:#9898B1BB;
+    #border-radius:15px;
+    #border-style:solid;
+    #border-color:#231211;
+    #border-color:#f3f6eb;
+    #border-width:3px;
+}
+
+.jayName {
+    text-shadow: 7px 7px #1C5C6C;
+    text-align:center;
+    color:#f3f6eb;
+    font-size: 100px;
+    padding-bottom:10px;
+    #padding:40vh;
+}
+
+.sectionHeader {
+    color:white;
+    font-weight:bold;
+    font-size:70px;
+    padding:50px;
+    text-align:center;
+}
+.sectionContent {
+    display:inline-block;
+    width:80%;
+    color:#f2f2f2;
+    font-size:25px;
+    min-padding:0px 70px;
+    text-align:center;
+}
+
+.aboutMe {
+    position:relative;
+    padding:0px 0px 50px;
+    width: 100%;
+    #border-bottom-width:2px;
+    #border-bottom:solid;
+    text-align:center;
+}
+
+section {
+
+    align-content:center;
+    text-align:center;
+}
+
+body {
+    margin: 0px;
+    #font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(#06dcff, #1C5C6C);
+
+}

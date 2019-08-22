@@ -1,0 +1,13 @@
+<html>
+<body>
+<div style="display:table-row;width:100%;overflow-x:scroll;overflow-y:hidden;">
+<% instagram.forEach(function(insta) { %>
+    <div style="display:table-cell;width:1000px;">
+        <a href="<%= insta.link %>" target="_blank">
+            <img src="<%= insta.images.standard_resolution.url %>" style=" height:100%">
+        </a>
+    </div>
+<% }); %>
+</div>
+</body>
+</html>

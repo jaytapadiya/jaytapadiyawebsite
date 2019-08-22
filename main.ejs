@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jay Tapadiya</title>
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+</head>
+<body>
+    <section class="nameBar">
+
+        <div class="navbar" id="navbar">
+            <a href="#home" id="homeButton" style="padding-left:30px;">Jay Tapadiya</a>
+            <a href="#contact" style="float:right">Contact</a>
+            <a href="#photos" id ="photosButton" style="float:right">Photos</a>
+            <a href="#about" id="aboutButton" style="float:right">About</a>
+        </div>
+        </div>
+        <div class="backBox">
+            <div class="jayName"><b>Jay Tapadiya</b></div>
+        </div>
+    </section>
+    <section class="aboutMe">
+        <div class="sectionHeader" id="aboutMe">About Me</div>
+        <div class="sectionContent">
+            My name is Jay Tapadiya and I am a second year Electrical and Computer Engineering student at UC San Diego.
+            <br/><br/>
+            I have two years of experience as a Software Engineering Intern at Hewlett Packard Enterprise.
+            <br/><br/>
+            In my free time, I take photos and play guitar.
+        </div>
+    </section>
+    <section>
+        <div class="sectionHeader" id="experience">Experience</div>
+        <div class="sectionContent">asdfasdfasdf</div>
+    </section>
+    <section>
+        <div class="sectionHeader" id="photoTitle">
+            <a href="http://www.instagram.com/jaytapadiyaphoto" style="text-decoration:inherit;color:inherit" target="_blank">Photos</a>
+        </div>
+        <div class="sectionContent" id="photoFeed" style="white-space:nowrap; overflow-x:scroll; overflow-y:hidden; height:60vh;">
+
+            <% instagram.forEach(function(insta) { %>
+<!--                <div style="width: 100%;overflow-x:scroll;">-->
+                    <a href="<%= insta.link %>" target="_blank" style="">
+                        <img src="<%= insta.images.standard_resolution.url %>" style=" height:100%">
+                    </a>
+<!--                </div>-->
+            <% }); %>
+        </div>
+    </section>
+    <section>
+        <div class="sectionHeader">Contact Me</div>
+        <div class="sectionContent"></div>
+    </section>
+<script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.getElementById("navbar").className = "navbar navbar-stickied";
+        } else {
+            document.getElementById("navbar").className = "navbar";
+        }
+    }
+    document.getElementById("aboutButton").onclick = function() {
+        window.scrollTo({top: window.innerHeight - 50, behavior:"smooth"})
+    };
+    document.getElementById("photosButton").onclick = function() {
+        var rect = document.getElementById("photoTitle").getBoundingClientRect();
+        window.scrollTo({top:rect.bottom,behavior:"smooth"});
+    }
+
+    document.getElementById("homeButton").onclick = function() {
+        window.scrollTo({top:0,behavior:"smooth"});
+    };
+
+</script>
+
+</body>
+</html>
